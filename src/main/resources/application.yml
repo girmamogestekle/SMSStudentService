@@ -1,0 +1,28 @@
+server:
+  port: ${PORT}
+
+spring:
+  config:
+    import: file:credentials.properties
+
+  application:
+    name: ${SERVICE_NAME}
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_DATABASE}/${DATABASE_NAME}
+    username: ${MYSQL_USERNAME}
+    password: ${MYSQL_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  eureka:
+    instance:
+      hostname: localhost
+    client:
+      service-url:
+        defaultZone: ${DEFAULT_ZONE}
+
+
