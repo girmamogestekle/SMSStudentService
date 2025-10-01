@@ -25,4 +25,12 @@ spring:
       service-url:
         defaultZone: ${DEFAULT_ZONE}
 
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    urls:
+      - name: Student Documentation
+        url: https://raw.githubusercontent.com/girmamogestekle/SMSAPISpecs/refs/heads/main/student-doc.yaml
+
 
